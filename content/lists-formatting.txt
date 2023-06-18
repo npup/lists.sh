@@ -1,0 +1,59 @@
+=: title Formatting of lists on lists.sh
+=: description Description of list file format
+=: publish_at 2023-06-18
+=: tags lists.sh, formatting, help, documentation
+=: list_type disc
+
+
+=> https://petter.lists.sh/lists-formatting-sv Here is the Swedish version of this document
+
+# Description of files that produce lists like this
+
+## The file and its structure
+
+The files shall be of type `.txt`
+They may (but need not) start with some metadata-entries (see below)
+Then follows any headings and lists (se formatting instructions below)
+You can look at the source file for this very list here:
+    => https://github.com/npup/lists.sh/blob/master/content/lists-formatting.txt
+
+
+
+## Metadata - data about the list itself
+
+A metadata entry is indicated by entering a line like `=: <key> <value>`. Here are the available metadata keys:
+    title - sets the list page title
+    publish_at - the publish date, formatted as `YYYY-MM-DD`
+    description - the list page description
+    tags - comma separated values of categories to tag the list page with
+    list_type - graphic indicator for the list items.  It is straight up the CSS `list-style-type` property (examples: circle, decimal, disc, square, none)
+
+## Formatting
+
+Hyperlinks
+    Hyperlinks are created by writing a line like `=> <hyperlink here>`.  For a custom link text, put another string after the link. Examples:
+        => https://petter.envall.se/
+        => https://petter.envall.se/ My home page
+
+Images
+    Images are created by writing a line like `=< <image src>`.  To set an alt-text, put another string after the src URL. Examples:
+        =< https://picsum.photos/120/80?random=1
+        =< https://picsum.photos/120/80?random=2 Some image
+
+Headings
+    Headings terminate any ongoing list, so that a new one may start
+    There are two levels of headings, h1 and h2
+    They are created by entering a line like `# <some text>` or `## <some text>`, respectively
+
+
+Block quote indication
+    Block quote indication is done by entering a line like `> <some citation>`.  Example:
+    > Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam architecto ad earum veritatis et sed harum id, enim aliquam modi. Similique error exercitationem alias cum natus non saepe officia quo.
+
+Preformatting
+    Preformatting is done by starting the line with ```, and closing the list item with entering ``` (and noting else!) at the start of a new line.  Example:
+    ```Preformnatted text
+```
+    Normal
+    Line items
+    Follow

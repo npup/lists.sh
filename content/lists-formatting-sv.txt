@@ -1,0 +1,59 @@
+=: title Formattering av listor på lists.sh
+=: description Beskrivning av filformat för en listsida
+=: publish_at 2023-06-18
+=: tags lists.sh, formatting, help, documentation, formattering, hjälp, dokumentation, svenska, swedish
+=: list_type disc
+
+
+=> https://petter.lists.sh/lists-formatting Here is the English version of this document
+
+# Beskrivning av filer som kan skapa listsidor likt denna
+
+## Filen och dess struktur
+
+Filerna skall vara av typen `.txt`
+De kan (men behöver ej) börja med några metadata-angivelser (se nedan)
+Därefter följer ev. rubriker och listor (se formatteringsinstruktioner nedan)
+Du kan se källfilen för precis denna listsida här:
+    => https://github.com/npup/lists.sh/blob/master/content/lists-formatting-sv.txt
+
+
+
+## Metadata - data om listsidan själv
+
+Metadataangivelser indikeras genom skriva en rad likt `=: <key> <value>`. Här är de tillgängliga metadatanycklarna: 
+    title - för att ange listsidans titel
+    publish_at - publiceringsdatum, formatterat enligt `YYYY-MM-DD`
+    description - listsidans närmare beskrivning
+    tags - kommasepararade värden för kategorier som listsidan skall taggas med
+    list_type - grafisk indikator för resp. item i listorna.  Det är CSS-egenskapen `list-style-type` rakt av (exempel: circle, decimal, disc, square, none)
+
+## Formattering
+
+Hyperlänkar
+    Hyperlänkar skapas genom att man skriver en rad likt `=> <länkmål>`.  För att ange en avvikande länktext, ange det som en sträng efter själva länken.  Exempel:
+        => https://petter.envall.se/
+        => https://petter.envall.se/ Min hemsida
+
+Bilder
+    Bilder skapas genom att man skriver en rad likt `=< <image src>`.  För att ange en alt-text, ange det som en sträng efter själva länken.  Exempel:
+        =< https://picsum.photos/120/80?random=1
+        =< https://picsum.photos/120/80?random=2 En bild
+
+Rubriker
+    Rubriker avslutar ev. "pågående" lista, så att en ny kan påbörjas
+    Det finns två rubriknivåer, h1 och h2
+    De skapas genom att man skriver en rad likt `# <rubriktext>` respektive `## <rubriktext>`
+
+
+Citatindikation
+    Citatindikation åstadkoms genom att man skriver en rad likt `> <citattext>`.  Exempel:
+    > Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam architecto ad earum veritatis et sed harum id, enim aliquam modi. Similique error exercitationem alias cum natus non saepe officia quo.
+
+Förformattering
+    Förformattering görs genom att man startar en rad med ```, och senare avslutar samma list item med ``` (och inget annat!) på en nya rad.  Exempel:
+    ```Förformatterad text
+```
+    Normala
+    Line items
+    Följer

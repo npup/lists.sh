@@ -1,0 +1,16 @@
+=: title Låtlista
+=: description Låtlista till spelning i Nynäshamn den 1/7 2023
+=: publish_at 2023-06-25
+=: tags låtar
+=: list_type disc
+
+
+Maj på Malö
+The long and winding road
+Underbart är kort
+Aftontankar vid Fridas ruta
+Penny Lane
+Drömmens skepp
+Tillägnan
+Ett glas öl
+Underneath the arches
